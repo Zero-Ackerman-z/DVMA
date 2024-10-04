@@ -18,13 +18,12 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "My Attributes")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Math")
 	float MyValue;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-	UFUNCTION(BlueprintCallable, Category = "My Functions")
-	float Sum(float A, float B);
+	UFUNCTION(BlueprintCallable, Category = "Math")
+	float Sum(float A, float B); // Método para sumar dos números
 
+	virtual void Tick(float DeltaTime) override; // Para actualizar en cada tick
 };
